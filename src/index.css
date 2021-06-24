@@ -1,9 +1,9 @@
 /* add correct styling */
-@import url("https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css"); 
+@import url("https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css");
 /* import Tailwind through CDN */
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 /* Font family */
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 .cursive {
   font-family: "Amatic SC", cursive;

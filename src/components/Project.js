@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffeect, useState } from "react";
+import sanityClient from "../client.js";
 
 export default function Project() {
-  return <h1>Project Page!</h1>
+  return <h1>Project Page!</h1>;
 }
