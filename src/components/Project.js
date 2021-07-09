@@ -1,82 +1,23 @@
-import React, { useEffect, useState } from "react";
-// import project from "../studio/schemas/project.js";
-import sanityClient from "../client.js";
+import React from "react";
+import "./projectCards.css";
 
-export default function Project() {
-  const [projectData, setProjectData] = useState(null);
-
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "project"]{
-        title,
-        date,
-        place,
-        description,
-        projectType,
-        link,
-        tags
-      }`
-      )
-      .then((data) => setProjectData(data))
-      .catch(console.error);
-  }, []);
-
-  console.log({ projectData });
-
+const Project = (props) => {
   return (
-    <main className="bg-green-100 min-h-screen p-12">
-      <section className="mx-auto">
-        <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-          Welcome to my Projects page
-        </h2>
-        <section className="grid grid-cols-2 gap-8">
-          {projectData &&
-            projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-16">
-                <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
-                  <a
-                    href={project.link}
-                    alt={project.title}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.title}{" "}
-                  </a>
-                </h3>
-                <div className="text-gray-500 text-xs space-x-4">
-                  <span>
-                    <strong className="font-bold">Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
-                  </span>
-                  <span>
-                    <strong className="font-bold">Company</strong>{" "}
-                    {project.place}
-                  </span>
-                  <span>
-                    <strong className="font-bold">Type</strong>{" "}
-                    {project.projectType}
-                  </span>
-                  <p className="my-6 text-lg text-gray-700 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <a
-                    href={project.link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="text-red-500 font-bold hover:underline text-xl hover:text-red-400"
-                  >
-                    View The Project
-                    <span role="img" aria-label="right pointer">
-                      👉
-                    </span>
-                  </a>
-                </div>
-              </article>
-            ))}
-        </section>
-      </section>
-    </main>
+    <div className="card text-center">
+      <div className="overflow">
+        <a href={props.link} target="_blank">
+          <img src={props.imgsrc} className="card-img-top" />
+        </a>
+      </div>
+      <div className="card-body text-dark">
+        <h4 className="card-title">{props.title}</h4>
+        <p className="card-text text-secondary">{props.description}</p>
+        <a href={props.link} target="_blank" className="btn btn-outline-dark">
+          Check out the repository 👈
+        </a>
+      </div>
+    </div>
   );
-}
+};
+
+export default Project;
