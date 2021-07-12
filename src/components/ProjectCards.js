@@ -7,7 +7,7 @@ import TinyApp from "../images/TinyApp.png";
 import Tweeter from "../images/Tweeter.png";
 import Portfolio from "../images/Portfolio.png";
 import InterviewScheduler from "../images/InterviewScheduler.png";
-import BucketListing from "../images/BucketListing.gif";
+import BucketListing from "../images/BucketListing.png";
 import WoFroH from "../images/WoFroH.gif";
 import Jungle from "../images/Jungle.png";
 // import MiTienda from "../images/MiTienda.gif";

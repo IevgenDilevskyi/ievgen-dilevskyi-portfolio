@@ -17,7 +17,7 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={ProjectCards} path="/project" />
-        <Route component={Project} path="/project" />
+        {/* <Route component={Project} path="/project" /> */}
       </Switch>
     </BrowserRouter>
   );
