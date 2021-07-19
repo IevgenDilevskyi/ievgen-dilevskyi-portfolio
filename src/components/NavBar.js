@@ -21,6 +21,13 @@ export default function NavBar() {
             Ievgen
           </NavLink>
           <NavLink
+            to="/about"
+            activeClassName="bg-red-700"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
+          >
+            About Me
+          </NavLink>
+          <NavLink
             to="/post"
             activeClassName="bg-red-700"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
@@ -33,13 +40,6 @@ export default function NavBar() {
             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
           >
             Projects
-          </NavLink>
-          <NavLink
-            to="/about"
-            activeClassName="bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
-          >
-            About Me
           </NavLink>
           <NavLink
             to={location.pathname}
