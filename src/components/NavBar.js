@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
 export default function NavBar() {
+  const location = useLocation();
+  console.log("location - " + location.pathname);
   return (
     <header className="bg-red-600">
       <div className="container mx-auto flex justify-between">
@@ -14,30 +16,44 @@ export default function NavBar() {
             // activeStyle={{
             //   color: "white",
             // }}
-            className="inflex-flex items-center py-6 px-3 mr-4 text-red-200 hover:text-gray-500 text-4xl font-bold cursive tracking-widest"
+            className="inflex-flex items-center py-6 px-3 mr-4 text-gray-100 hover:text-gray-500 text-4xl font-bold cursive tracking-widest"
           >
             Ievgen
           </NavLink>
           <NavLink
             to="/post"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-gray-500"
+            activeClassName="bg-red-700"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
           >
             Blog Posts
           </NavLink>
           <NavLink
             to="/project"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-gray-500"
+            activeClassName="bg-red-700"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-gray-500"
+            activeClassName="bg-red-700"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
           >
             About Me
+          </NavLink>
+          <NavLink
+            to={location.pathname}
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
+          >
+            <td
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/15_AT8YFhkKRgtE2oc8Lvn2pp45MmnYgV/view?usp=sharing"
+                )
+              }
+            >
+              Resume
+            </td>
           </NavLink>
         </nav>
         <div className="inline-flex py-3 px-3 my-6">
