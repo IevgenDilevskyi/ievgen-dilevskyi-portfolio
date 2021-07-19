@@ -55,6 +55,12 @@ export default function NavBar() {
               Resume
             </td>
           </NavLink>
+          <a
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-gray-500"
+            href="mailto: e.dilevskiy@gmail.com"
+          >
+            Contact Me
+          </a>
         </nav>
         <div className="inline-flex py-3 px-3 my-6">
           <SocialIcon
