@@ -30,7 +30,8 @@ export default function Home() {
           Hello Friends! I'm Ievgen
         </h1>
       </section>
-      <div id="visits"> This page has been visited {state.value} times</div>
+      <p>This page has been visited {state.value} times</p>
+      {/* <div id="visits"> This page has been visited {state.value} times</div> */}
     </main>
   );
 }
