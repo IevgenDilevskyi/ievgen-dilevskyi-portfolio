@@ -29,8 +29,8 @@ export default function Home() {
           {" "}
           Hello Friends! I'm Ievgen
         </h1>
-        <div id="counter"> This page has been visited {state.value} times</div>
       </section>
+      <div id="visits"> This page has been visited {state.value} times</div>
     </main>
   );
 }
